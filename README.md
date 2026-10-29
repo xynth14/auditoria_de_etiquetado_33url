@@ -6,10 +6,12 @@ Auditoría de todos los elementos interactivos de 33 URLs del Portal Claro Perú
 
 | Archivo | Qué muestra |
 |---|---|
-| `index.html` | Dashboard: indicadores generales, etiquetados vs. sin etiquetar, cobertura por zona de la página (Header, Cuerpo, Footer, Widgets), cobertura por URL y metodología y criterios. |
-| `detalle.html` | Detalle de las 33 URLs en acordeón: cada elemento con su sección, estado, presencia en Desktop/Móvil, evento que dispara y nota. Incluye buscador y filtros por estado y dispositivo. |
+| `index.html` | Dashboard: indicadores generales, etiquetados vs. sin etiquetar, cobertura por zona de la página (Header, Cuerpo, Footer, Widgets), casos clave sin etiquetar y su impacto, cobertura por URL y metodología y criterios. |
+| `detalle.html` | Detalle de las 33 URLs en acordeón: cada elemento con su sección, estado, presencia en Desktop/Móvil, evento que dispara y nota. Incluye buscador, filtros por estado y dispositivo, y la prueba con interacción real de los formularios y del buscador. |
+| `comparativa.html` | Header y footer: Portal `/personas/` frente a las variantes `/personas-a/` y `/personas-b/`. Cobertura por zona, prueba de por qué el header de las variantes no etiqueta y qué cambió en su estructura. |
+| `causas.html` | Análisis de causas de los elementos sin etiquetar: agrupados por causa y por origen (del sitio, cobertura del etiquetado, condicional), detalle de cada causa con enlaces directos a los componentes, y cambios del sitio detectados en el historial público (Wayback Machine). |
 
-Para verlo, abre `index.html` en el navegador. Desde ahí se navega al detalle.
+Para verlo, abre `index.html` en el navegador. Desde ahí se navega a las demás páginas por las pestañas superiores.
 
 ## Resultados principales
 
@@ -17,6 +19,9 @@ Para verlo, abre `index.html` en el navegador. Desde ahí se navega al detalle.
 - **Cobertura total: 84,7 %**: 9.406 elementos etiquetados y 13 parciales (etiquetan solo en un dispositivo).
 - **1.700 elementos sin etiquetar (15,3 %).** El 54 % está en el header: menú móvil, buscador y el header completo de `/personas-a/` y `/personas-b/`.
 - **Footer prácticamente completo:** 99,7 %.
+- **Header de las variantes A/B:** 0 % etiquetado frente a 88,5 % en el Portal. Las variantes usan un header con otra estructura de clases que el etiquetado existente no reconoce.
+- **Origen de lo no etiquetado:** 470 elementos (27,6 %) por estructura del sitio o componentes sin etiquetado definido, 1.222 (71,9 %) por cobertura del etiquetado y 8 (0,5 %) condicionales (solo aparecen en ciertos escenarios).
+- **Cambios del sitio:** en 12 de las 33 páginas el sitio reemplazó componentes que el etiquetado tenía contemplados; en 5 de ellas quedaron 82 elementos nuevos sin medir.
 
 ## Metodología
 
